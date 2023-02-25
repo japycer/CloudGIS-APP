@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DAddDataset</class>
+ <widget class="QWidget" name="DAddDataset">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DAddDataset</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	outline:0px;
+	color:#DCDCDC;
+}
+
+*:disabled{
+	background:#444444;
+	border-color:#484848;
+}
+
+QMenu{
+	color: rgb(20, 20, 20);
+	background-color: rgb(218, 218, 218);
+}
+
+QWidget{
+	border:1px solid #DCDCDC;
+	background:#484848;
+	border-radius:0px;
+	color:#DCDCDC;
+	border-style:none;
+}
+
+QSplitter::handle{
+background:#7c7c7c;
+}
+
+QAbstractButton{
+	border-radius:0px;
+	color:#DCDCDC;
+	background:none;
+	border-style:none;
+}
+
+QAbstractButton:hover{
+	color:#FFFFFF;
+	background-color:#00BB9E;
+}
+
+QAbstractButton:checked,QAbstractButton:pressed{
+	color:#DCDCDC;
+	border-style:solid;
+	border-width:0px 0px 0px 2px;
+	padding:4px 4px 4px 2px;
+	border-color:#00BB9E;
+	background-color:#444444;
+}
+
+QLineEdit{
+	border:1px solid #242424;
+	border-radius:3px;
+	padding:2px;
+	background-color: rgb(90, 90, 90);
+	color:#DCDCDC;
+	selection-background-color:#484848;
+	selection-background-color: rgba(81, 163, 244);
+}
+
+QLineEdit:focus{
+	border:1px solid #242424;
+}
+
+QLineEdit{
+	lineedit-password-character:9679;
+}
+
+.QGroupBox{
+	border:1px solid #242424;
+	border-radius:5px;
+	margin-top:3ex;
+}
+
+.QGroupBox::title{
+	subcontrol-origin:margin;
+	position:relative;
+	left:10px;
+}
+
+.QPushButton,.QToolButton{
+	border-style:none;
+	border:1px solid #242424;
+	color:#DCDCDC;
+	padding:5px;
+	min-height:15px;
+	border-radius:5px;
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+.QPushButton:hover,.QToolButton:hover{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+.QPushButton:pressed,.QToolButton:pressed{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QRadioButton::indicator{
+	width:15px;
+	height:25px;
+}
+
+QRadioButton::indicator::unchecked{
+	image:url(:/images/qss/psblack/radiobutton_unchecked.png);
+}
+
+QRadioButton::indicator::unchecked:disabled{	
+	image:url(:/images/qss/psblack/radiobutton_unchecked_disable.png);
+}
+
+QRadioButton::indicator::checked{
+	image:url(:/images/qss/psblack/radiobutton_checked.png);
+}
+
+QRadioButton::indicator::checked:disabled{
+	image:url(:/images/qss/psblack/radiobutton_checked_disable.png);
+}
+
+QGroupBox::indicator,QTreeWidget::indicator,QListWidget::indicator{
+	padding:0px -3px 0px 3px;
+}
+
+QCheckBox::indicator,QGroupBox::indicator,QTreeWidget::indicator,QListWidget::indicator{
+	width:13px;
+	height:13px;
+}
+
+QCheckBox::indicator:unchecked,QGroupBox::indicator:unchecked,QTreeWidget::indicator:unchecked,QListWidget::indicator:unchecked{
+	image:url(:/images/qss/psblack/checkbox_unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:disabled,QGroupBox::indicator:unchecked:disabled,QTreeWidget::indicator:unchecked:disabled,QListWidget::indicator:disabled{
+	image:url(:/images/qss/psblack/checkbox_unchecked_disable.png);
+}
+
+QCheckBox::indicator:checked,QGroupBox::indicator:checked,QTreeWidget::indicator:checked,QListWidget::indicator:checked{
+	image:url(:/images/qss/psblack/checkbox_checked.png);
+}
+
+QCheckBox::indicator:checked:disabled,QGroupBox::indicator:checked:disabled,QTreeWidget::indicator:checked:disabled,QListWidget::indicator:checked:disabled{
+	image:url(:/images/qss/psblack/checkbox_checked_disable.png);
+}
+
+QCheckBox::indicator:indeterminate,QGroupBox::indicator:indeterminate,QTreeWidget::indicator:indeterminate,QListWidget::indicator:indeterminate{
+	image:url(:/images/qss/psblack/checkbox_parcial.png);
+}
+
+QCheckBox::indicator:indeterminate:disabled,QGroupBox::indicator:indeterminate:disabled,QTreeWidget::indicator:indeterminate:disabled,QListWidget::indicator:indeterminate:disabled{
+	image:url(:/images/qss/psblack/checkbox_parcial_disable.png);
+}
+
+QComboBox{
+	border:1px solid #8f8f8f;
+	background-color: rgb(118, 118, 118);
+	border-radius: 5px;
+}
+
+QComboBox::down-arrow,QDateEdit[calendarPopup=&quot;true&quot;]::down-arrow,QTimeEdit[calendarPopup=&quot;true&quot;]::down-arrow,QDateTimeEdit[calendarPopup=&quot;true&quot;]::down-arrow{
+	image:url(:/images/qss/psblack/add_bottom.png);
+	width:10px;
+	height:10px;
+	right:2px;
+}
+
+QComboBox::drop-down,QDateEdit::drop-down,QTimeEdit::drop-down,QDateTimeEdit::drop-down{
+	subcontrol-origin:padding;
+	subcontrol-position:top right;
+	width:15px;
+	border-left-width:0px;
+	border-left-style:solid;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-left-color:#242424;
+}
+
+QComboBox::drop-down:on{
+	top:1px;
+}
+/*
+QSlider::groove:horizontal{
+	background:#484848;
+	height:8px;
+	border-radius:4px;
+}
+
+QSlider::add-page:horizontal{
+	background:#484848;
+	height:8px;
+	border-radius:4px;
+}
+
+QSlider::sub-page:horizontal{
+	background:#242424;
+	height:8px;
+	border-radius:4px;
+}
+
+QSlider::handle:horizontal{
+	width:13px;
+	margin-top:-3px;
+	margin-bottom:-3px;
+	border-radius:6px;
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #444444,stop:0.8 #242424);
+}
+
+QSlider::groove:vertical{
+	width:8px;
+	border-radius:4px;
+	background:#484848;
+}
+
+QSlider::add-page:vertical{
+	width:8px;
+	border-radius:4px;
+	background:#484848;
+}
+
+QSlider::sub-page:vertical{
+	width:8px;
+	border-radius:4px;
+	background:#242424;
+}
+
+QSlider::handle:vertical{
+	height:14px;
+	margin-left:-3px;
+	margin-right:-3px;
+	border-radius:6px;
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #444444,stop:0.8 #242424);
+}
+*/
+QScrollBar:horizontal{
+	background:#484848;
+	padding:0px;
+	border-radius:6px;
+	max-height:12px;
+}
+
+QScrollBar::handle:horizontal{
+	background:#525252;
+	min-width:50px;
+	border-radius:6px;
+}
+
+QScrollBar::handle:horizontal:hover{
+	background:#242424;
+}
+
+QScrollBar::handle:horizontal:pressed{
+	background:#242424;
+}
+
+QScrollBar::add-page:horizontal{
+	background:none;
+}
+
+QScrollBar::sub-page:horizontal{
+	background:none;
+}
+
+QScrollBar::add-line:horizontal{
+	background:none;
+}
+
+QScrollBar::sub-line:horizontal{
+	background:none;
+}
+
+QScrollBar:vertical{
+	background:#484848;
+	padding:0px;
+	border-radius:6px;
+	max-width:12px;
+}
+
+QScrollBar::handle:vertical{
+	background:#525252;
+	min-height:50px;
+	border-radius:6px;
+}
+
+QScrollBar::handle:vertical:hover{
+	background:#242424;
+}
+
+QScrollBar::handle:vertical:pressed{
+	background:#242424;
+}
+
+QScrollBar::add-page:vertical{
+	background:none;
+}
+
+QScrollBar::sub-page:vertical{
+	background:none;
+}
+
+QScrollBar::add-line:vertical{
+	background:none;
+}
+
+QScrollBar::sub-line:vertical{
+	background:none;
+}
+
+QScrollArea{
+	border:0px;
+}
+
+QGroupBox::indicator,QTreeWidget::indicator,QListWidget::indicator{
+	padding:0px -3px 0px 3px;
+}
+
+/*
+QCheckBox::indicator,QGroupBox::indicator,QTreeWidget::indicator,QListWidget::indicator{
+	width:13px;
+	height:13px;
+}
+
+QCheckBox::indicator:unchecked,QGroupBox::indicator:unchecked,QTreeWidget::indicator:unchecked,QListWidget::indicator:unchecked{
+	image:url(:/qss/psblack/checkbox_unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:disabled,QGroupBox::indicator:unchecked:disabled,QTreeWidget::indicator:unchecked:disabled,QListWidget::indicator:disabled{
+	image:url(:/qss/psblack/checkbox_unchecked_disable.png);
+}
+*/
+QListWidget::item:hover{
+	background-color: rgb(162, 162, 162);
+}
+
+QListWidget::item:selected{
+	background-color:rgb(0, 139, 208)
+}
+
+QListWidget::item{
+	height: 40px;
+	width: 60px;
+	margin: 1px 2px;
+	border:2px solid rgb(0, 117, 176);
+}
+
+QTabBar::tab{
+border:1px solid #242424;
+color:#DCDCDC;
+margin:0px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+QTabBar::tab:selected,QTabBar::tab:hover{
+border-style:solid;
+border-color:#00BB9E;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QTabBar::tab:top,QTabBar::tab:bottom{
+padding:3px 8px 3px 8px;
+}
+
+QTabBar::tab:left,QTabBar::tab:right{
+padding:8px 3px 8px 3px;
+}
+
+QTabBar::tab:top:selected,QTabBar::tab:top:hover{
+border-width:2px 0px 0px 0px;
+}
+
+QTabBar::tab:right:selected,QTabBar::tab:right:hover{
+border-width:0px 0px 0px 2px;
+}
+
+QTabBar::tab:bottom:selected,QTabBar::tab:bottom:hover{
+border-width:0px 0px 2px 0px;
+}
+
+QTabBar::tab:left:selected,QTabBar::tab:left:hover{
+border-width:0px 2px 0px 0px;
+}
+
+QTabBar::tab:first:top:selected,QTabBar::tab:first:top:hover,QTabBar::tab:first:bottom:selected,QTabBar::tab:first:bottom:hover{
+border-left-width:1px;
+border-left-color:#242424;
+}
+
+QTabBar::tab:first:left:selected,QTabBar::tab:first:left:hover,QTabBar::tab:first:right:selected,QTabBar::tab:first:right:hover{
+border-top-width:1px;
+border-top-color:#242424;
+}
+
+QTabBar::tab:last:top:selected,QTabBar::tab:last:top:hover,QTabBar::tab:last:bottom:selected,QTabBar::tab:last:bottom:hover{
+border-right-width:1px;
+border-right-color:#242424;
+}
+
+QTabBar::tab:last:left:selected,QTabBar::tab:last:left:hover,QTabBar::tab:last:right:selected,QTabBar::tab:last:right:hover{
+border-bottom-width:1px;
+border-bottom-color:#242424;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_10">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QListWidget" name="mListWidget">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>Add VectorLayer</string>
+       </property>
+       <property name="toolTip">
+        <string>add vector data</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images.qrc">
+         <normaloff>:/images/themes/default/mActionAddPolyline.svg</normaloff>:/images/themes/default/mActionAddPolyline.svg</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Add RasterLayer</string>
+       </property>
+       <property name="toolTip">
+        <string>add raster data</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images.qrc">
+         <normaloff>:/images/themes/default/mActionAddRasterLayer.svg</normaloff>:/images/themes/default/mActionAddRasterLayer.svg</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Add WmsLayer</string>
+       </property>
+       <property name="toolTip">
+        <string>add wms from internet</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images.qrc">
+         <normaloff>:/images/themes/default/mActionAddWmsLayer.svg</normaloff>:/images/themes/default/mActionAddWmsLayer.svg</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Add GeeLayer</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images.qrc">
+         <normaloff>:/images/Mine/geeicon.png</normaloff>:/images/Mine/geeicon.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Add BaseMap</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/images.qrc">
+         <normaloff>:/images/Mine/ditu.png</normaloff>:/images/Mine/ditu.png</iconset>
+       </property>
+      </item>
+     </widget>
+     <widget class="QWidget" name="mWidgetSplitterRight" native="true">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QStackedWidget" name="mMianStackedWidget">
+           <property name="currentIndex">
+            <number>3</number>
+           </property>
+           <widget class="QWidget" name="mPageAddVector">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>30</y>
+               <width>491</width>
+               <height>551</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="mVLayoutPage1">
+              <property name="spacing">
+               <number>30</number>
+              </property>
+              <property name="topMargin">
+               <number>15</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="mGroupBoxDataType">
+                <property name="title">
+                 <string>Data Type</string>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QRadioButton" name="mRadioBtnShp">
+                   <property name="text">
+                    <string>shp</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="mRadioBtnGeojson">
+                   <property name="text">
+                    <string>geoJson</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="maximumSize">
+                    <size>
+                     <width>55</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>encode:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="mComboxPage1Encode"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupboxSource1">
+                <property name="title">
+                 <string>Source</string>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QLineEdit" name="mLineEditVectorFileName"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="mBtnBrower1">
+                   <property name="text">
+                    <string>...</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="mPageAddRaster">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>30</y>
+               <width>361</width>
+               <height>341</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="mVLayoutPage2">
+              <property name="topMargin">
+               <number>15</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="mMianGroupboxPage2">
+                <property name="title">
+                 <string>Source</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="mLabelRasterInfo">
+                   <property name="text">
+                    <string>tif. tiff. jpg.  png</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <item>
+                    <widget class="QLineEdit" name="mLineEditRaster2"/>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="mBtnBrowser2">
+                     <property name="text">
+                      <string>...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="mPageAddWmsLayer">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>120</y>
+               <width>271</width>
+               <height>198</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="mVLayoutPage3">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="topMargin">
+               <number>15</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="groupBox_3">
+                <property name="title">
+                 <string>Source</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <property name="spacing">
+                  <number>20</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <widget class="QLabel" name="mLabelWmsLayerName">
+                     <property name="text">
+                      <string>Name</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="mLineEditWmsName"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_7">
+                   <item>
+                    <widget class="QLabel" name="mLabelWmsUrl">
+                     <property name="text">
+                      <string>URL</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="mLIneEditWmsURl"/>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="mBtnTestLink">
+                  <property name="text">
+                   <string>Try</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="mBtnLoad">
+                  <property name="text">
+                   <string>Load</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="mPageAddGeeLayer">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>40</y>
+               <width>544</width>
+               <height>528</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="mVLayoutPage4">
+              <item>
+               <widget class="QTabWidget" name="mTabWidgetAddGee">
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="mTab1AddGeeBrowser">
+                 <attribute name="title">
+                  <string>Bowser</string>
+                 </attribute>
+                 <layout class="QVBoxLayout" name="verticalLayout_11">
+                  <property name="spacing">
+                   <number>25</number>
+                  </property>
+                  <item>
+                   <widget class="QGroupBox" name="mGeeGroupBoxOptions">
+                    <property name="title">
+                     <string>ImageCollection</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                     <property name="spacing">
+                      <number>20</number>
+                     </property>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_17">
+                       <item>
+                        <widget class="QLabel" name="mLabelSnippetID">
+                         <property name="text">
+                          <string>Snippt-ID*:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="mLineEditSnippetID">
+                         <property name="placeholderText">
+                          <string>ee.ImageCollection(...)</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="mBtnPageGeeSummit">
+                         <property name="toolTip">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>Summit</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_18">
+                       <item>
+                        <spacer name="horizontalSpacer_5">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="mLabelDuration">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>During Time</string>
+                         </property>
+                         <property name="wordWrap">
+                          <bool>false</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_6">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="mGroupBoxFilter">
+                    <property name="title">
+                     <string>Filter Image</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_9">
+                     <property name="spacing">
+                      <number>20</number>
+                     </property>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_19">
+                       <item>
+                        <widget class="QLabel" name="mLabelFilterDate">
+                         <property name="text">
+                          <string>Filter Date</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="mLineEditFromTime">
+                         <property name="placeholderText">
+                          <string>From...</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="mBtnSetStartTime">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../images/images.qrc">
+                           <normaloff>:/images/themes/default/mActionTouch2.png</normaloff>:/images/themes/default/mActionTouch2.png</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="mLineEditEndTime">
+                         <property name="placeholderText">
+                          <string>To...</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="mBtnSetEndTime">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../images/images.qrc">
+                           <normaloff>:/images/themes/default/mActionTouch2.png</normaloff>:/images/themes/default/mActionTouch2.png</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_20">
+                       <item>
+                        <widget class="QLabel" name="mLabelFilterBounds">
+                         <property name="text">
+                          <string>Filter Bounds</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="mComboxBounds">
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="mLabelFilterbounds">
+                         <property name="text">
+                          <string>Or</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="mLineEditCustomEEFileterbounds">
+                         <property name="placeholderText">
+                          <string>eeObj</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_21">
+                       <item>
+                        <widget class="QLabel" name="mLabelFilterCloud">
+                         <property name="text">
+                          <string>Filter Cloud</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="mLineEditCloudRate">
+                         <property name="placeholderText">
+                          <string>Cloud cover rate[0-100]</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="mBtnCustomCloudAlgo">
+                         <property name="toolTip">
+                          <string>Custom an algorithm to remove cloud</string>
+                         </property>
+                         <property name="text">
+                          <string>Custom</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_24">
+                       <item>
+                        <widget class="QLabel" name="mLabelSelectBand">
+                         <property name="text">
+                          <string>Select Band:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="mComboxSelectBands"/>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="mLabelSelectBand_2">
+                         <property name="text">
+                          <string>Selected:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="mComboxSelectedBands"/>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="mBtnPage3GeeBandDetails">
+                         <property name="toolTip">
+                          <string>Show ImgCollection proprities details</string>
+                         </property>
+                         <property name="text">
+                          <string>Details</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="mBtnPageGeeSummitFilter">
+                         <property name="toolTip">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>Summit</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="mGroupBoxPostOperation">
+                    <property name="title">
+                     <string>Post Operation</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_22">
+                     <item>
+                      <widget class="QComboBox" name="mComboxPostOperation"/>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="mPage4ShowParams">
+                       <property name="text">
+                        <string>VisParams:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="mBtnSetShowParams">
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="../images/images.qrc">
+                         <normaloff>:/images/themes/default/mActionTouch2.png</normaloff>:/images/themes/default/mActionTouch2.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="mPage4LayerName">
+                       <property name="text">
+                        <string>LayerName*:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="mLineEditEELayerName">
+                       <property name="placeholderText">
+                        <string>LayerName</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="mBtnZoomTo">
+                       <property name="toolTip">
+                        <string>Zoom to added layer?</string>
+                       </property>
+                       <property name="text">
+                        <string>ZoomTo</string>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="checked">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="mTab2AddGeeVisual">
+                 <attribute name="title">
+                  <string>Visualize</string>
+                 </attribute>
+                 <widget class="QWidget" name="">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>20</y>
+                    <width>471</width>
+                    <height>351</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="mVLayoutVisualize">
+                   <item>
+                    <widget class="QGroupBox" name="mGroupBoxImgStatic">
+                     <property name="title">
+                      <string>Images stastic</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_23">
+                      <item>
+                       <widget class="QRadioButton" name="mRadioBtnPre">
+                        <property name="text">
+                         <string>Pre-Filter</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="mRadioBtnPostFilter">
+                        <property name="text">
+                         <string>Post-Filter</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="mRadioBtnPostOperation">
+                        <property name="text">
+                         <string>Post-Operration</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QStackedWidget" name="mStackedWidgetVisualize">
+                     <widget class="QWidget" name="mVisualizePageLineChart"/>
+                     <widget class="QWidget" name="mVisualizePageBarChart"/>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="mPageAddBaseMap">
+            <widget class="QListWidget" name="mListWidgetBaseMap">
+             <property name="geometry">
+              <rect>
+               <x>60</x>
+               <y>30</y>
+               <width>531</width>
+               <height>561</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mBtnAdd">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mBtnClose">
+             <property name="text">
+              <string>Close</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../images/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

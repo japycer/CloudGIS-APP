@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DSliderPlus</class>
+ <widget class="QWidget" name="DSliderPlus">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>342</width>
+    <height>72</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DSliderPlus</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	outline:0px;
+	color:#DCDCDC;
+}
+
+*:disabled{
+	background:#444444;
+	border-color:#484848;
+}
+
+QWidget{
+	border:1px solid #DCDCDC;
+	background:#484848;
+	border-radius:0px;
+	color:#DCDCDC;
+	border-style:none;
+}
+
+QSlider::groove:horizontal{
+	background:#484848;
+	height:8px;
+	border-radius:4px;
+}
+
+QSlider::add-page:horizontal{
+	background:#484848;
+	height:8px;
+	border-radius:4px;
+}
+
+QSlider::sub-page:horizontal{
+	background:#242424;
+	height:8px;
+	border-radius:4px;
+}
+
+QSlider::handle:horizontal{
+	width:13px;
+	margin-top:-3px;
+	margin-bottom:-3px;
+	border-radius:6px;
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #444444,stop:0.8 #242424);
+}
+
+QSlider::groove:vertical{
+	width:8px;
+	border-radius:4px;
+	background:#484848;
+}
+
+QSlider::add-page:vertical{
+	width:8px;
+	border-radius:4px;
+	background:#484848;
+}
+
+QSlider::sub-page:vertical{
+	width:8px;
+	border-radius:4px;
+	background:#242424;
+}
+
+QSlider::handle:vertical{
+	height:14px;
+	margin-left:-3px;
+	margin-right:-3px;
+	border-radius:6px;
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #444444,stop:0.8 #242424);
+}
+
+QSpinBox{
+border:1px solid #242424;
+border-radius:3px;
+padding:2px;
+background:none;
+selection-background-color:#484848;
+selection-color:#DCDCDC;
+}
+
+QSpinBox:focus{
+border:1px solid #242424;
+}
+
+QSpinBox::up-button{
+image:url(:/images/qss/psblack/add_top.png);
+width:10px;
+height:10px;
+padding:2px 5px 0px 0px;
+}
+
+QSpinBox::down-button{
+image:url(:/images/qss/psblack/add_bottom.png);
+width:10px;
+height:10px;
+padding:0px 5px 2px 0px;
+}
+
+QSpinBox::up-button:pressed{
+top:-2px;
+}
+
+QSpinBox::down-button:pressed{
+bottom:-2px;
+}
+
+QSpinBox{
+background:#444444;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="mMainHLayout">
+   <item>
+    <widget class="QSlider" name="mMainHorizontalSlider">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="mMainSpinBox"/>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

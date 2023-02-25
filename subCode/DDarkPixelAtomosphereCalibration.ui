@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DDarkPixelAtomosphereCalibration</class>
+ <widget class="QWidget" name="DDarkPixelAtomosphereCalibration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>442</width>
+    <height>481</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DDarkPixelAtomosphereCalibration</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	outline:0px;
+	color:#DCDCDC;
+}
+
+*:disabled{
+	background:#444444;
+	border-color:#484848;
+}
+
+QWidget{
+	border:1px solid #DCDCDC;
+	background:#484848;
+	border-radius:0px;
+	color:#DCDCDC;
+	border-style:none;
+}
+
+QAbstractButton{
+	border-radius:0px;
+	color:#DCDCDC;
+	background:none;
+	border-style:none;
+}
+
+QAbstractButton:hover{
+	color:#FFFFFF;
+	background-color:#00BB9E;
+}
+
+QAbstractButton:checked,QAbstractButton:pressed{
+	color:#DCDCDC;
+	border-style:solid;
+	border-width:0px 0px 0px 2px;
+	padding:4px 4px 4px 2px;
+	border-color:#00BB9E;
+	background-color:#444444;
+}
+
+QLineEdit{
+	border:1px solid #242424;
+	border-radius:3px;
+	padding:2px;
+	background-color: rgb(90, 90, 90);
+	color:#DCDCDC;
+	selection-background-color:#484848;
+	selection-background-color: rgba(81, 163, 244);
+}
+
+QLineEdit:focus{
+	border:1px solid #242424;
+}
+
+QLineEdit{
+	lineedit-password-character:9679;
+}
+
+.QPushButton{
+	border-style:none;
+	border:1px solid #242424;
+	color:#DCDCDC;
+	padding:5px;
+	min-height:15px;
+	border-radius:5px;
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+.QPushButton:hover{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+.QPushButton:pressed{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QComboBox{
+	border:1px solid #8f8f8f;
+	background-color: rgb(118, 118, 118);
+	border-radius: 5px;
+}
+
+QComboBox::down-arrow{
+	image:url(:/images/qss/psblack/add_bottom.png);
+	width:10px;
+	height:10px;
+	right:2px;
+}
+
+QComboBox::drop-down{
+	subcontrol-origin:padding;
+	subcontrol-position:top right;
+	width:15px;
+	border-left-width:0px;
+	border-left-style:solid;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-left-color:#242424;
+}
+
+
+QComboBox::drop-down:on{
+	top:1px;
+}
+
+QTableView QLineEdit,QTableView QComboBox,QTableView QSpinBox,QTableView QDoubleSpinBox,QTableView QDateEdit,QTableView QTimeEdit,QTableView QDateTimeEdit{
+border-width:0px;
+border-radius:0px;
+}
+
+QTableView QLineEdit:focus,QTableView QComboBox:focus,QTableView QSpinBox:focus,QTableView QDoubleSpinBox:focus,QTableView QDateEdit:focus,QTableView QTimeEdit:focus,QTableView QDateTimeEdit:focus{
+border-width:0px;
+border-radius:0px;
+}
+
+/*QTableView 左上角样式*/
+QTableView QTableCornerButton::section {
+    color: red;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+ }
+
+ QTableView {
+    color: white;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: white;                             /*选中区域的文字颜色*/
+    selection-background-color: rgb(77, 77, 77);        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 2px 4px;
+}
+
+QHeaderView {
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(108, 108, 108);
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+
+QHeaderView::section {
+    color: white;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="mLabelEEImageName">
+       <property name="text">
+        <string>EEImage:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="mLineEditImgName"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="mComboBoxSensorType"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="mLabelOutName">
+       <property name="text">
+        <string>OutName:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="mLineEditOutName"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mBtnSetShowParams">
+       <property name="text">
+        <string>SetShowParam</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableView" name="mMainTableView"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mBtnSummitTableEdit">
+       <property name="text">
+        <string>Summit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mBtnCalculate">
+       <property name="text">
+        <string>Calculate</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mBtnLoad">
+       <property name="text">
+        <string>Load</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mBtnQuit">
+       <property name="text">
+        <string>Quit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DToolBox</class>
+ <widget class="QWidget" name="DToolBox">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>459</width>
+    <height>479</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ToolBox</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	outline:0px;
+	color:#DCDCDC;
+}
+
+*:disabled{
+	background:#444444;
+	border-color:#484848;
+}
+
+QWidget{
+	border:1px solid #DCDCDC;
+	background:#484848;
+	border-radius:0px;
+	color:#DCDCDC;
+	border-style:none;
+}
+
+QSplitter::handle{
+background:#7c7c7c;
+}
+
+QAbstractButton{
+	border-radius:0px;
+	color:#DCDCDC;
+	background:none;
+	border-style:none;
+}
+
+QAbstractButton:hover{
+	color:#FFFFFF;
+	background-color:#00BB9E;
+}
+
+QAbstractButton:checked,QAbstractButton:pressed{
+	color:#DCDCDC;
+	border-style:solid;
+	border-width:0px 0px 0px 2px;
+	padding:4px 4px 4px 2px;
+	border-color:#00BB9E;
+	background-color:#444444;
+}
+
+QLineEdit{
+	border:1px solid #242424;
+	border-radius:3px;
+	padding:2px;
+	background-color: rgb(90, 90, 90);
+	color:#DCDCDC;
+	selection-background-color:#484848;
+	selection-background-color: rgba(81, 163, 244);
+}
+
+QLineEdit:focus{
+	border:1px solid #242424;
+}
+
+QLineEdit{
+	lineedit-password-character:9679;
+}
+
+.QPushButton{
+	border-style:none;
+	border:1px solid #242424;
+	color:#DCDCDC;
+	padding:5px;
+	min-height:15px;
+	border-radius:5px;
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+.QPushButton:hover{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+.QPushButton:pressed{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QToolBox::tab{
+padding:3px;
+border-radius:5px;
+color:#DCDCDC;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QToolTip{
+border:0px solid #DCDCDC;
+padding:1px;
+color:#DCDCDC;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QToolBox::tab:selected{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>8</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="mWidgetHeader" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLineEdit" name="mLineEditSearchContent">
+        <property name="placeholderText">
+         <string>Find...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mBtnSearch">
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolBox" name="mMainToolBox">
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <widget class="QWidget" name="mPageVector">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Vector</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPageRaster">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Raster</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPageAnalyze">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Analysis</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPageHydro">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Hydrology</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPageLandsat">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Landsat</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPagePython">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>449</width>
+        <height>195</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Python</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPageExport">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Export</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="mPageOthers">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>283</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Others</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

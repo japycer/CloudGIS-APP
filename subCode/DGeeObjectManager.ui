@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DGeeObjectManager</class>
+ <widget class="QWidget" name="DGeeObjectManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GEE PyObj Manager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	outline:0px;
+	color:#DCDCDC;
+}
+
+*:disabled{
+	background:#444444;
+	border-color:#484848;
+}
+
+QWidget{
+	border:1px solid #DCDCDC;
+	background:#484848;
+	border-radius:0px;
+	color:#DCDCDC;
+	border-style:none;
+}
+
+QAbstractButton{
+	border-radius:0px;
+	color:#DCDCDC;
+	background-color: rgb(214, 214, 214);
+	border-style:none;
+}
+
+QAbstractButton:hover{
+	color:#FFFFFF;
+	background-color:#00BB9E;
+}
+
+QAbstractButton:checked,QAbstractButton:pressed{
+	color:#DCDCDC;
+	border-style:solid;
+	border-width:0px 0px 0px 2px;
+	padding:4px 4px 4px 2px;
+	border-color:#00BB9E;
+	background-color:#444444;
+}
+
+.QPushButton{
+	border-style:none;
+	border:1px solid #242424;
+	color:#DCDCDC;
+	padding:5px;
+	min-height:15px;
+	border-radius:5px;
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+.QPushButton:hover{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #646464,stop:1 #525252);
+}
+
+.QPushButton:pressed{
+	background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #484848,stop:1 #383838);
+}
+
+QTreeWidget::indicator{
+padding:0px -3px 0px 3px;
+}
+
+QTreeWidget::indicator{
+	width:13px;
+	height:13px;
+}
+
+QTreeWidget::branch:closed:has-children{
+	margin:4px;
+	border-image:url(:/images/qss/psblack/branch_open.png);
+}
+
+QTreeWidget::branch:open:has-children{
+	margin:4px;
+	border-image:url(:/images/qss/psblack/branch_close.png);
+}
+
+QTreeWidget::indicator:unchecked{
+	image:url(:/images/qss/psblack/checkbox_unchecked.png);
+}
+
+QTreeWidget::indicator:unchecked:disabled{
+	image:url(:/images/qss/psblack/checkbox_unchecked_disable.png);
+}
+
+QTreeWidget::indicator:checked{
+	image:url(:/images/qss/psblack/checkbox_checked.png);
+}
+
+QTreeWidget::indicator:checked:disabled{
+	image:url(:/images/qss/psblack/checkbox_checked_disable.png);
+}
+
+QTreeWidget::indicator:indeterminate{
+	image:url(:/images/qss/psblack/checkbox_parcial.png);
+}
+
+QTreeWidget::indicator:indeterminate:disabled{
+	image:url(:/images/qss/psblack/checkbox_parcial_disable.png);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTreeWidget" name="mMainTreeWidget">
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="mWidgetBottom" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mBtnDeleteSelect">
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mBtnQuit">
+        <property name="text">
+         <string>Qiut</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

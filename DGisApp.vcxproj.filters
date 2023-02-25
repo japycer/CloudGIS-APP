@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="DGisApp.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="DGisApp.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtRcc Include="images\images.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DGisApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DPythonUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsattributetabledialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsclipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsdelattrdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsfeatureaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsfixattributedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsguivectorlayertools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsidentifyresultsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgslayerstylingwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmapthemes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptoolidentifyaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptoolselect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptoolselectionhandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptoolselectutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmeasuredialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmeasuretool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsundowidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pyInterface\DCodeEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pyInterface\DFindDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pyInterface\DHighLighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pyInterface\DPyInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pyInterface\DPythonConsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptooladdfeature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptoolsplitfeatures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsmaptoolmovefeature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DMapToolAddFeature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="databaseInterface\DDatabaseUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DGeeInfoBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="databaseInterface\DDatabaseInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsstatusbarcoordinateswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsstatusbarscalewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DTitleBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DAddDataset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DCustomWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DMapToolTemporyDrawer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTemporyDrawerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DMapToolDrawSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DClassifyManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qgis\qgsapplayertreeviewmenuprovider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPyGeeUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DEELayerShowOptionWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DSliderPlus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DGeeObjectManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DImgCollectionViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DImageViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DGeeClassifierManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DToolBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DToolBoxManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DTasselledCapTransformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DLandsatCalibration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DDarkPixelAtomosphereCalibration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DWelComePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DEnums.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DLoginDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DRegisterDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subCode\DGeeExporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="UI\DGisApp.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgssymbolselectordialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmapstylingwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmaskingwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrasterhistogramwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrasterminmaxwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrastertransparencywidget.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrenderermeshpropswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrendererrasterpropswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsvectortilebasiclabelingwidget.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsvectortilebasicrendererwidget.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgslabelingwidget.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeshrenderer3daveragingwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeshrendereractivedatasetwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeshrenderermeshsettingswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmapunitscalewidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsunitselectionwidget.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeshrendererscalarsettingswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeshvariablestrokewidthwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgscolorrampshaderwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeshrenderervectorsettingswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsidentifyresultsbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsattributetabledialog.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsdelattrdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsdatumtransformdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsdualviewbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsexpressionpreviewbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsaddattrdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsfieldcalculatorbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsorganizetablecolumnsdialog.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgscoordinateoperationwidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsvectorlayersaveasdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsmeasurebase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsnewvectorlayerdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsnewmemorylayerdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="pyInterface\DFindDialog.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="pyInterface\DPlainEditWidget.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="pyInterface\DPyInterface.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="pyInterface\DPythonConsole.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsdatasourcemanagerdialog.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsstylemanagerdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="databaseInterface\DDatabaseInterface.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="DGeeInfoBase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DTitleBar.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DAddDataset.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrasterlayersaveasdialogbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrasterformatsaveoptionswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="UI\qgsrasterpyramidsoptionswidgetbase.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="DTemporyDrawerManager.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="DClassifyManager.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DEELayerShowOptionWin.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DGeeObjectManager.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DSliderPlus.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DImgCollectionViewer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DImageViewer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DGeeClassifierManager.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DToolBox.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DTasselledCapTransformation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DLandsatCalibration.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DDarkPixelAtomosphereCalibration.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DWelComePage.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DLoginDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DRegisterDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="subCode\DGeeExporter.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="qgis\qgsmapthemes.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgslayerstylingwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsundowidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmaptoolselect.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmaptoolselectionhandler.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsfeatureaction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsidentifyresultsdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmaptoolidentifyaction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsattributetabledialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsdelattrdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsfixattributedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsclipboard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsguivectorlayertools.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmeasuretool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmeasuredialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pyInterface\DCodeEditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pyInterface\DFindDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pyInterface\DHighLighter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pyInterface\DPyInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pyInterface\DPythonConsole.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmaptoolsplitfeatures.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmaptoolmovefeature.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsmaptooladdfeature.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DPythonUtils.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="databaseInterface\DDatabaseInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DGeeInfoBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsstatusbarcoordinateswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsstatusbarscalewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DTitleBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DAddDataset.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DCustomWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DTemporyDrawerManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DMapToolTemporyDrawer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DMapToolDrawSample.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DClassifyManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qgis\qgsapplayertreeviewmenuprovider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DEELayerShowOptionWin.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DSliderPlus.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DGeeObjectManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DImgCollectionViewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DImageViewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DGeeClassifierManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DToolBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DToolBoxManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DTasselledCapTransformation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DLandsatCalibration.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DDarkPixelAtomosphereCalibration.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DWelComePage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DLoginDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DRegisterDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="subCode\DGeeExporter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="qgis\qgsmaptoolselectutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subCode\DMapToolAddFeature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="databaseInterface\DDatabaseUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DGeeToolBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPyGeeUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subCode\DAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEnums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DGisApp.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DGis.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

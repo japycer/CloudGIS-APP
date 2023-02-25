@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DPyInterfaceClass</class>
+ <widget class="QWidget" name="DPyInterfaceClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1054</width>
+    <height>728</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DPyInterface</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#DPyInterfaceClass{
+	background-color: rgb(152, 152, 152);
+}
+#mHeaderW{
+	background-color: rgb(61, 61, 65)
+}
+#mMainW{
+	background-color: rgb(152, 152, 152);
+}
+#mWidgetFileInfo
+{
+	border-color: rgb(255, 255, 255);
+	color: rgb(245, 245, 245);
+	background-color: rgb(253, 253, 253);
+}
+QLineEdit
+{
+border-radius:5px;
+background-color: rgb(230, 230, 230);
+}
+QComboBox
+{
+	border-radius:5px;
+}
+
+QComboBox:hover
+{
+	border-color: rgb(52, 65, 255);
+}
+
+#mBtnCloseCurrent
+{
+border:none;
+	background-color:transparent;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,20">
+   <property name="spacing">
+    <number>5</number>
+   </property>
+   <property name="leftMargin">
+    <number>3</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="mHeaderW" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>11</number>
+      </property>
+      <item>
+       <widget class="QToolBar" name="mFileToolBar">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="text" stdset="0">
+         <string>...</string>
+        </property>
+        <addaction name="actionmActionNewFile"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionOenFile"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionSaveEdit"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionSaveAs"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolBar" name="mEditToolBar">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="text" stdset="0">
+         <string>...</string>
+        </property>
+        <addaction name="actionmActionClear"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionCut"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionCopy"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionPaste"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionComment"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolBar" name="mRunToolBar">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="text" stdset="0">
+         <string>...</string>
+        </property>
+        <addaction name="actionmActionRun"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionStop"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionOpenConsole"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionSetting"/>
+        <addaction name="separator"/>
+        <addaction name="actionmActionSearch"/>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="mMainW" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="mVerticalLayoutMain" stretch="0">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="mWidgetFileInfo" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+	color: rgb(234, 234, 234); 
+	background-color: rgb(51, 51, 55);
+}
+
+QLineEdit
+{
+	border-color: rgb(208, 208, 208);
+	background-color: rgb(103, 103, 103);
+}
+
+QComboBox::item
+{
+	border-width:1px;
+	background-color: rgb(61, 61, 61);
+}
+QComboBox QAbstractItemView::item:selected
+{
+	background-color: rgb(81, 81, 81);
+}</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="21,10,5,1,1">
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>544</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="mLineEditFilePath">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="placeholderText">
+              <string>File path</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="mComboxFiles">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mBtnCloseCurrent">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../images/images.qrc">
+               <normaloff>:/images/Mine/guanbi1.png</normaloff>:/images/Mine/guanbi1.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+  <action name="actionmActionOenFile">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/folder.png</normaloff>:/images/Mine/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionOenFile</string>
+   </property>
+   <property name="toolTip">
+    <string>Open file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionmActionNewFile">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/py-empty.png</normaloff>:/images/Mine/py-empty.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionNewFile</string>
+   </property>
+   <property name="toolTip">
+    <string>New file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionmActionSaveEdit">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/py-save.png</normaloff>:/images/Mine/py-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionSaveEdit</string>
+   </property>
+   <property name="toolTip">
+    <string>Save file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionmActionSaveAs">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/py-saveAs.png</normaloff>:/images/Mine/py-saveAs.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionSaveAs</string>
+   </property>
+   <property name="toolTip">
+    <string>SaveAs file</string>
+   </property>
+  </action>
+  <action name="actionmActionCut">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/themes/default/mActionEditCut.svg</normaloff>:/images/themes/default/mActionEditCut.svg</iconset>
+   </property>
+   <property name="text">
+    <string>mActionCut</string>
+   </property>
+   <property name="toolTip">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionmActionCopy">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/py-copy.png</normaloff>:/images/Mine/py-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionCopy</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionmActionPaste">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/py-paste.png</normaloff>:/images/Mine/py-paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionPaste</string>
+   </property>
+   <property name="toolTip">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionmActionComment">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/themes/default/console/iconUncommentEditorConsole.svg</normaloff>:/images/themes/default/console/iconUncommentEditorConsole.svg</iconset>
+   </property>
+   <property name="text">
+    <string>mActionComment</string>
+   </property>
+   <property name="toolTip">
+    <string>(un)Comment</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+/</string>
+   </property>
+  </action>
+  <action name="actionmActionRun">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/py-run.png</normaloff>:/images/Mine/py-run.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionRun</string>
+   </property>
+   <property name="toolTip">
+    <string>Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionmActionStop">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/themes/default/mActionStop.svg</normaloff>:/images/themes/default/mActionStop.svg</iconset>
+   </property>
+   <property name="text">
+    <string>mActionStop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionmActionOpenConsole">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/console.png</normaloff>:/images/Mine/console.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionOpenConsole</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Console</string>
+   </property>
+  </action>
+  <action name="actionmActionClear">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/qingchu.png</normaloff>:/images/Mine/qingchu.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionClear</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionmActionSearch">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/xingzhuanggongnengtubiao-.png</normaloff>:/images/Mine/xingzhuanggongnengtubiao-.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionSearch</string>
+   </property>
+   <property name="toolTip">
+    <string>Search</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionmActionSetting">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/images/Mine/setting.png</normaloff>:/images/Mine/setting.png</iconset>
+   </property>
+   <property name="text">
+    <string>mActionSetting</string>
+   </property>
+   <property name="toolTip">
+    <string>Setting</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../images/images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

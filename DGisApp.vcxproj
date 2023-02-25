@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{962D2D29-99E9-4E95-A783-B782F64DFCF7}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>C:\Users\Japycer\AppData\Local\Programs\Python\Python37\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Japycer\AppData\Local\Programs\Python\Python37\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\QGIS 3.16\apps\qgis\include;$(QTDIR)\include\QtXML;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;.\;.\subCode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\QGIS 3.16\apps\qt5\include\QtCharts;D:\QGIS 3.16\apps\qt5\include\QtSql;D:\QGIS 3.16\apps\qt5\include\QtUiTools;D:\QGIS 3.16\apps\qt5\include\QtNetwork;D:\QGIS 3.16\apps\qt5\include\QtPrintSupport;D:\QGIS 3.16\apps\qt5\QWT\include;D:\QGIS 3.16\apps\qgis\include;D:\QGIS 3.16\include;$(QTDIR)\include\QtXML;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;.\;.\subCode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\QGIS 3.16\lib;D:\QGIS 3.16\apps\qt5\QWT\lib;D:\QGIS 3.16\apps\qgis\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;qgis_core.lib;qgis_gui.lib;python37.lib;qgis_app.lib;qwt.lib;gdal_i.lib;Qt5UiTools.lib;Qt5Sql.lib;Qt5WebView.lib;Qt5WebKitWidgets.lib;Qt5WebKit.lib;Qt5Charts.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>QGisQt</QtInstall>
+    <QtModules>core;xml;gui;svg;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>QGisQt</QtInstall>
+    <QtModules>core;gui;svg;widgets;xml</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="databaseInterface\DDatabaseInterface.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="databaseInterface\DDatabaseUtils.cpp" />
+    <ClCompile Include="DClassifyManager.cpp" />
+    <ClCompile Include="DEnums.cpp" />
+    <ClCompile Include="DGeeInfoBase.cpp" />
+    <ClCompile Include="DMapToolDrawSample.cpp" />
+    <ClCompile Include="DMapToolTemporyDrawer.cpp" />
+    <ClCompile Include="DPyGeeUtils.cpp" />
+    <ClCompile Include="DSliderPlus.cpp" />
+    <ClCompile Include="DTemporyDrawerManager.cpp" />
+    <ClCompile Include="pyInterface\DCodeEditor.cpp" />
+    <ClCompile Include="pyInterface\DFindDialog.cpp" />
+    <ClCompile Include="pyInterface\DHighLighter.cpp" />
+    <ClCompile Include="pyInterface\DPyInterface.cpp" />
+    <ClCompile Include="pyInterface\DPythonConsole.cpp" />
+    <ClCompile Include="qgis\qgsapplayertreeviewmenuprovider.cpp" />
+    <ClCompile Include="qgis\qgsattributetabledialog.cpp" />
+    <ClCompile Include="qgis\qgsclipboard.cpp" />
+    <ClCompile Include="qgis\qgsdelattrdialog.cpp" />
+    <ClCompile Include="qgis\qgsfeatureaction.cpp" />
+    <ClCompile Include="qgis\qgsfixattributedialog.cpp" />
+    <ClCompile Include="qgis\qgsguivectorlayertools.cpp" />
+    <ClCompile Include="qgis\qgsidentifyresultsdialog.cpp" />
+    <ClCompile Include="qgis\qgslayerstylingwidget.cpp" />
+    <ClCompile Include="qgis\qgsmapthemes.cpp" />
+    <ClCompile Include="qgis\qgsmaptooladdfeature.cpp" />
+    <ClCompile Include="qgis\qgsmaptoolidentifyaction.cpp" />
+    <ClCompile Include="qgis\qgsmaptoolmovefeature.cpp" />
+    <ClCompile Include="qgis\qgsmaptoolselect.cpp" />
+    <ClCompile Include="qgis\qgsmaptoolselectionhandler.cpp" />
+    <ClCompile Include="qgis\qgsmaptoolselectutils.cpp" />
+    <ClCompile Include="qgis\qgsmaptoolsplitfeatures.cpp" />
+    <ClCompile Include="qgis\qgsmeasuredialog.cpp" />
+    <ClCompile Include="qgis\qgsmeasuretool.cpp" />
+    <ClCompile Include="qgis\qgsstatusbarcoordinateswidget.cpp" />
+    <ClCompile Include="qgis\qgsstatusbarscalewidget.cpp" />
+    <ClCompile Include="qgis\qgsundowidget.cpp" />
+    <ClCompile Include="subCode\DAddDataset.cpp" />
+    <ClCompile Include="subCode\DAlgorithm.cpp" />
+    <ClCompile Include="subCode\DCustomWindow.cpp" />
+    <ClCompile Include="subCode\DDarkPixelAtomosphereCalibration.cpp" />
+    <ClCompile Include="subCode\DEELayerShowOptionWin.cpp" />
+    <ClCompile Include="subCode\DGeeClassifierManager.cpp" />
+    <ClCompile Include="subCode\DGeeExporter.cpp" />
+    <ClCompile Include="subCode\DGeeObjectManager.cpp" />
+    <ClCompile Include="subCode\DImageViewer.cpp" />
+    <ClCompile Include="subCode\DImgCollectionViewer.cpp" />
+    <ClCompile Include="subCode\DInterface.cpp" />
+    <ClCompile Include="subCode\DLandsatCalibration.cpp" />
+    <ClCompile Include="subCode\DLoginDialog.cpp" />
+    <ClCompile Include="subCode\DMapToolAddFeature.cpp" />
+    <ClCompile Include="subCode\DPythonUtils.cpp" />
+    <ClCompile Include="subCode\DRegisterDialog.cpp" />
+    <ClCompile Include="subCode\DTasselledCapTransformation.cpp" />
+    <ClCompile Include="subCode\DTitleBar.cpp" />
+    <ClCompile Include="subCode\DToolBox.cpp" />
+    <ClCompile Include="subCode\DToolBoxManager.cpp" />
+    <ClCompile Include="subCode\DWelComePage.cpp" />
+    <QtRcc Include="DGisApp.qrc" />
+    <QtMoc Include="DGisApp.h" />
+    <ClCompile Include="DGisApp.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtRcc Include="images\images.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="databaseInterface\DDatabaseInterface.ui" />
+    <QtUic Include="DClassifyManager.ui" />
+    <QtUic Include="DGeeInfoBase.ui" />
+    <QtUic Include="DSliderPlus.ui" />
+    <QtUic Include="DTemporyDrawerManager.ui" />
+    <QtUic Include="pyInterface\DFindDialog.ui" />
+    <QtUic Include="pyInterface\DPlainEditWidget.ui" />
+    <QtUic Include="pyInterface\DPyInterface.ui" />
+    <QtUic Include="pyInterface\DPythonConsole.ui" />
+    <QtUic Include="subCode\DAddDataset.ui" />
+    <QtUic Include="subCode\DDarkPixelAtomosphereCalibration.ui" />
+    <QtUic Include="subCode\DEELayerShowOptionWin.ui" />
+    <QtUic Include="subCode\DGeeClassifierManager.ui" />
+    <QtUic Include="subCode\DGeeExporter.ui" />
+    <QtUic Include="subCode\DGeeObjectManager.ui" />
+    <QtUic Include="subCode\DImageViewer.ui" />
+    <QtUic Include="subCode\DImgCollectionViewer.ui" />
+    <QtUic Include="subCode\DLandsatCalibration.ui" />
+    <QtUic Include="subCode\DLoginDialog.ui" />
+    <QtUic Include="subCode\DRegisterDialog.ui" />
+    <QtUic Include="subCode\DTasselledCapTransformation.ui" />
+    <QtUic Include="subCode\DTitleBar.ui" />
+    <QtUic Include="subCode\DToolBox.ui" />
+    <QtUic Include="subCode\DWelComePage.ui" />
+    <QtUic Include="UI\DGisApp.ui" />
+    <QtUic Include="UI\qgsaddattrdialogbase.ui" />
+    <QtUic Include="UI\qgsattributetabledialog.ui" />
+    <QtUic Include="UI\qgscolorrampshaderwidgetbase.ui" />
+    <QtUic Include="UI\qgscoordinateoperationwidgetbase.ui" />
+    <QtUic Include="UI\qgsdatasourcemanagerdialog.ui" />
+    <QtUic Include="UI\qgsdatumtransformdialogbase.ui" />
+    <QtUic Include="UI\qgsdelattrdialogbase.ui" />
+    <QtUic Include="UI\qgsdualviewbase.ui" />
+    <QtUic Include="UI\qgsexpressionpreviewbase.ui" />
+    <QtUic Include="UI\qgsfieldcalculatorbase.ui" />
+    <QtUic Include="UI\qgsidentifyresultsbase.ui" />
+    <QtUic Include="UI\qgslabelingwidget.ui" />
+    <QtUic Include="UI\qgsmapstylingwidgetbase.ui" />
+    <QtUic Include="UI\qgsmapunitscalewidgetbase.ui" />
+    <QtUic Include="UI\qgsmaskingwidgetbase.ui" />
+    <QtUic Include="UI\qgsmeasurebase.ui" />
+    <QtUic Include="UI\qgsmeshrenderer3daveragingwidgetbase.ui" />
+    <QtUic Include="UI\qgsmeshrendereractivedatasetwidgetbase.ui" />
+    <QtUic Include="UI\qgsmeshrenderermeshsettingswidgetbase.ui" />
+    <QtUic Include="UI\qgsmeshrendererscalarsettingswidgetbase.ui" />
+    <QtUic Include="UI\qgsmeshrenderervectorsettingswidgetbase.ui" />
+    <QtUic Include="UI\qgsmeshvariablestrokewidthwidgetbase.ui" />
+    <QtUic Include="UI\qgsnewmemorylayerdialogbase.ui" />
+    <QtUic Include="UI\qgsnewvectorlayerdialogbase.ui" />
+    <QtUic Include="UI\qgsorganizetablecolumnsdialog.ui" />
+    <QtUic Include="UI\qgsrasterformatsaveoptionswidgetbase.ui" />
+    <QtUic Include="UI\qgsrasterhistogramwidgetbase.ui" />
+    <QtUic Include="UI\qgsrasterlayersaveasdialogbase.ui" />
+    <QtUic Include="UI\qgsrasterminmaxwidgetbase.ui" />
+    <QtUic Include="UI\qgsrasterpyramidsoptionswidgetbase.ui" />
+    <QtUic Include="UI\qgsrastertransparencywidget.ui" />
+    <QtUic Include="UI\qgsrenderermeshpropswidgetbase.ui" />
+    <QtUic Include="UI\qgsrendererrasterpropswidgetbase.ui" />
+    <QtUic Include="UI\qgsstylemanagerdialogbase.ui" />
+    <QtUic Include="UI\qgssymbolselectordialogbase.ui" />
+    <QtUic Include="UI\qgsunitselectionwidget.ui" />
+    <QtUic Include="UI\qgsvectorlayersaveasdialogbase.ui" />
+    <QtUic Include="UI\qgsvectortilebasiclabelingwidget.ui" />
+    <QtUic Include="UI\qgsvectortilebasicrendererwidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="qgis\qgsmapthemes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="qgis\qgslayerstylingwidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="qgis\qgsundowidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="qgis\qgsmaptoolselect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="qgis\qgsmaptoolselectionhandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="subCode\DRegisterDialog.h" />
+    <QtMoc Include="subCode\DWelComePage.h" />
+    <QtMoc Include="subCode\DTasselledCapTransformation.h" />
+    <QtMoc Include="subCode\DToolBoxManager.h" />
+    <QtMoc Include="subCode\DToolBox.h" />
+    <QtMoc Include="subCode\DTitleBar.h" />
+    <QtMoc Include="pyInterface\DCodeEditor.h" />
+    <QtMoc Include="pyInterface\DFindDialog.h" />
+    <QtMoc Include="pyInterface\DHighLighter.h" />
+    <QtMoc Include="pyInterface\DPyInterface.h" />
+    <QtMoc Include="pyInterface\DPythonConsole.h" />
+    <QtMoc Include="qgis\qgsmaptooladdfeature.h" />
+    <QtMoc Include="qgis\qgsmaptoolsplitfeatures.h" />
+    <QtMoc Include="qgis\qgsmaptoolmovefeature.h" />
+    <QtMoc Include="databaseInterface\DDatabaseInterface.h" />
+    <ClInclude Include="databaseInterface\DDatabaseUtils.h" />
+    <QtMoc Include="DGeeInfoBase.h" />
+    <QtMoc Include="DClassifyManager.h" />
+    <ClInclude Include="DEnums.h" />
+    <ClInclude Include="DGeeToolBase.h" />
+    <QtMoc Include="qgis\qgsstatusbarcoordinateswidget.h" />
+    <QtMoc Include="qgis\qgsstatusbarscalewidget.h" />
+    <QtMoc Include="DMapToolTemporyDrawer.h" />
+    <QtMoc Include="DTemporyDrawerManager.h" />
+    <QtMoc Include="DMapToolDrawSample.h" />
+    <QtMoc Include="qgis\qgsapplayertreeviewmenuprovider.h" />
+    <ClInclude Include="DPyGeeUtils.h" />
+    <QtMoc Include="DSliderPlus.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="subCode\DInterface.h" />
+    <QtMoc Include="subCode\DAddDataset.h" />
+    <QtMoc Include="subCode\DCustomWindow.h" />
+    <QtMoc Include="subCode\DEELayerShowOptionWin.h" />
+    <QtMoc Include="subCode\DGeeObjectManager.h" />
+    <QtMoc Include="subCode\DImgCollectionViewer.h" />
+    <QtMoc Include="subCode\DImageViewer.h" />
+    <QtMoc Include="subCode\DGeeClassifierManager.h" />
+    <QtMoc Include="subCode\DLandsatCalibration.h" />
+    <ClInclude Include="subCode\DAlgorithm.h" />
+    <QtMoc Include="subCode\DDarkPixelAtomosphereCalibration.h" />
+    <QtMoc Include="subCode\DLoginDialog.h" />
+    <QtMoc Include="subCode\DGeeExporter.h" />
+    <ClInclude Include="subCode\DMapToolAddFeature.h" />
+    <QtMoc Include="subCode\DPythonUtils.h" />
+    <QtMoc Include="qgis\qgsmeasuredialog.h" />
+    <QtMoc Include="qgis\qgsmeasuretool.h" />
+    <QtMoc Include="qgis\qgsclipboard.h" />
+    <QtMoc Include="qgis\qgsfixattributedialog.h" />
+    <QtMoc Include="qgis\qgsdelattrdialog.h" />
+    <QtMoc Include="qgis\qgsattributetabledialog.h" />
+    <QtMoc Include="qgis\qgsmaptoolidentifyaction.h" />
+    <QtMoc Include="qgis\qgsidentifyresultsdialog.h" />
+    <QtMoc Include="qgis\qgsfeatureaction.h" />
+    <QtMoc Include="qgis\qgsguivectorlayertools.h" />
+    <ClInclude Include="qgis\qgsmaptoolselectutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DGisApp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DGis.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
